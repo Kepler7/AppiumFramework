@@ -1,4 +1,5 @@
 ﻿using AppiumFrameWork.Hooks;
+using AppiumFrameWork.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Android;
@@ -21,16 +22,8 @@ namespace AppiumFrameWork
         [Test]
         public void OpenAppium()
         {
-
-
-
-
-
-            //WebDriverWait driverWait = new WebDriverWait(androidDriver, TimeSpan.FromSeconds(10));
-            //driverWait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("icon ion-ios-chatboxes-outline")));
-            AndroidContext.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-            AndroidContext.FindElementByXPath("//i[@class='icon ion-ios-chatboxes-outline']").Click();
-
+            HomeClass home = new HomeClass(AndroidContext);
+            home.ClickOnChats();
             
         }
 
