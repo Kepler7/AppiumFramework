@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Hooks\TestInitialize.cs" />
+    <Compile Include="Pages\ChatsPage.cs" />
     <Compile Include="Pages\HomeClass.cs" />
     <Compile Include="TestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

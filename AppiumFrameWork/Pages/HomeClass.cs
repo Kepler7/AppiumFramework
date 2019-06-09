@@ -20,17 +20,20 @@ namespace AppiumFrameWork.Pages
 
         #endregion
         #region Constructor
+        AndroidDriver<AndroidElement> _androidDriver;
 
         public HomeClass(AndroidDriver<AndroidElement> androidDriver)
         {
             PageFactory.InitElements(androidDriver, this);
+            _androidDriver = androidDriver;
         }
 
         #endregion
 
-        public void ClickOnChats()
+        public ChatsPage ClickOnChats()
         {
             chats.Click();
+            return new ChatsPage(_androidDriver);
         }
 
         #region public methods
